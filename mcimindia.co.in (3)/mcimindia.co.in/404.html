@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>404 - Page Not Found</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="MCIM-ayurveda-unani" name="keywords" />
+    <meta content="MCIM-ayurveda-unani" name="description" />
+    <link rel="shortcut icon" href="Images/mcim-logo.png" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="lib/animate/animate.min.css" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Inter, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .error-container {
+            text-align: center;
+            background: white;
+            padding: 60px 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            max-width: 600px;
+        }
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            color: #667eea;
+            margin: 0;
+            line-height: 1;
+        }
+        .error-title {
+            font-size: 32px;
+            color: #333;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .error-message {
+            font-size: 18px;
+            color: #666;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+        .error-links {
+            margin-top: 40px;
+        }
+        .btn-home {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 10px;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        .btn-home:hover {
+            background: #764ba2;
+            text-decoration: none;
+            color: white;
+        }
+        .btn-find {
+            background: #198759;
+        }
+        .btn-find:hover {
+            background: #146b43;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">Page Not Found</h2>
+        <p class="error-message">
+            The page you are looking for is not available in this offline version of the MCIM website.
+            <br><br>
+            Currently, only the following pages are available:
+            <br>
+            • Home Page (index.html)
+            <br>
+            • Find Your Doctor (FindDoctor.html)
+        </p>
+        <div class="error-links">
+            <a href="./index.html" class="btn-home">Go to Home</a>
+            <a href="./FindDoctor.html" class="btn-home btn-find">Find Doctor</a>
+        </div>
+    </div>
+</body>
+</html>

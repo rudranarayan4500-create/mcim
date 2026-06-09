@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8" /><title>
+	MCIM-Home
+</title><meta content="width=device-width, initial-scale=1.0" name="viewport" /><meta content="MCIM-ayurveda-unani" name="keywords" /><meta content="MCIM-ayurveda-unani" name="description" /><link rel="shortcut icon" href="Images/mcim-logo.png" /><link href="css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="lib/animate/animate.min.css" /><link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" /><link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: Inter, sans-serif;
+        }
+        /*hide scrolling*/
+        /*::-webkit-scrollbar {
+            width: 0px;  
+            background: transparent;  
+        }*/
+        .topbar {
+            border-bottom: 1px solid #c1b4b4;
+        }
+
+        .top-brand {
+            color: #22596c;
+            font-weight: bold;
+        }
+
+        .navbar-nav {
+            border: 0px solid #d8d6d6;
+            border-radius: 0 !important;
+        }
+
+        .nav-link:hover, .active {
+            /*border-bottom:2px solid #E85122 !important;*/
+            color: #198759 !important;
+            background-color: #fff;
+        }
+
+        .nav-item {
+            font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+            font-size: 17px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+        }
+
+        .navbar .navbar-nav .nav-item {
+            display: inline !important;
+        }
+
+        .nav-item i {
+            margin-right: 5px;
+            font-size: 22px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+        }
+
+        .bran-name {
+            color: #e85122;
+            font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+        }
+
+        .title {
+            background-image: url(Images/banner-title.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .my-footer {
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px inset;
+            border-top: 0px solid #1ea740;
+            background-image: url(Images/banner-footer.png) !important;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .footer-item {
+        }
+
+        .footer-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .seprator {
+            border-bottom: 1px solid #198759;
+            margin: 10px 0 10px 0;
+        }
+        /*Progress bar ----------------------------------------------*/
+        .pro-modal {
+            position: fixed;
+            z-index: 0;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: Black;
+            filter: alpha(opacity=60);
+            opacity: 0.6;
+            -moz-opacity: 0.8;
+        }
+
+        .pro-center {
+            z-index: 1000;
+            margin: 250px auto;
+            width: 130px;
+            border-radius: 10px;
+            filter: alpha(opacity=100);
+            opacity: 1;
+            -moz-opacity: 1;
+        }
+
+            .pro-center img {
+                height: 128px;
+                width: 128px;
+                background-color: Black;
+                filter: alpha(opacity=60);
+                opacity: 0.6;
+                -moz-opacity: 0.8;
+            }
+
+        .breadcrumb-item a {
+            text-decoration: none;
+        }
+
+            .breadcrumb-item a:hover {
+                color: #0026ff !important;
+            }
+
+        .show-pwd {
+            font-size: 12px;
+            padding: 5px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .title {
+                background: none;
+            }
+
+            .my-footer {
+                background-image: url(Images/banner-footer-sm.png) !important;
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+        }
+
+        @media print {
+            html, body {
+                display: none; /* hide whole page */
+            }
+        }
+
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+            src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype');
+            src: url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2');
+            src: url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff');
+            src: url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype');
+            src: url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+    
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="./" id="aspnetForm" ondragstart="return false" draggable="false" autocomplete="off" onpaste="return false;" oncut="return false;" oncopy="return false;" autocompletetype="Disabled">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUh9d3mZzWEozPksMvNiM4FQ7HeYKCFdG71ZXN0TUh9d3mZzWEozPksMvNiM4FQ7HeYKCFdG7IBD2QWAmYPZBYKAgEPFgIeCWlubmVyaHRtbAXVDDx0YWJsZT48dHI+PHRkPjxkaXYgY2xhc3M9Jyc+PGRpdiBjbGFzcz0nY2FyZCBtLTUh9d3mZzWEozPksMvNiM4FQ7HeYKCFdG7nPjxpbWcgc3JjPSdJbWFnZXMvRW1wbG95ZWUvRGV2ZW5kcmEgRmFkbmF2aXMuanBnJyBjbGFzcz0naW1nLWZsdWlkIHJvdW5kZWQtdG9wIHctMTUh9d3mZzWEozPksMvNiM4FQ7HeYKCFdG7sYXNzPSdjYXJkLWZvb3Rlcic+PHAgY2xhc3M9J3RleHQtY2VudGVyIHAtMCBtLTUh9d3mZzWEozPksMvNiM4FQ7HeYKCFdG7wIGNsYXNzPSd0ZXh0LWNlbnRlciBwLTAgbS0wJz5Ib24nYmxlIENoaWVmIE1pbmlzdGVyPC9wPjwvZGl2PjwvZGl2PjwvZGl2PjwvdGQ+PHRkPjxkaXYgY2xhc3M9Jyc+PGRpdiBjbGFzcz0nY2FyZCBtLTUh9d3mZzWEozPksMvNiM4FQ7HeYKCFdG7nPjxpbWcgc3JjPSdJbWFnZXMvRW1wbG95ZWUvU3VuZXRyYSBBaml0IFBhd2FyLmpwZycgY2xhc3M9J2ltZy1mbHVpZCByb3VuZGVkLXRvcCB3LTEwMCcgYWx0PScnIC8+PC9kaXY+PGRpdiBjbGFzcz0nY2FyZC1mb290ZXInPjxwIGNsYXNzPSd0ZXh0LWNlbnRlciBwLTAgbS0wJz5TdW5ldHJhIEFqaXQgUGF3YXI8L3A+PHAgY2xhc3M9J3RleHQtY2VudGVyIHAtMCBtLTUh9d3mZzWEozPksMvNiM4FQ7HeYKCFdG7vZGl2PjwvZGl2PjwvdGQ+PHRkPjxkaXYgY2xhc3M9Jyc+PGRpdiBjbGFzcz0nY2FyZCBtLTUh9d3mZzWEozPksMvNiM4FQ7HeYKCFdG7nPjxpbWcgc3JjPSdJbWFnZXMvRW1wbG95ZWUvRWtuYXRoIFNoaW5kZS5qcGcnIGNsYXNzPSdpbWctZmx1aWQgcm91bmRlZC10b3Agdy0xMDAnIGFsdD0nJyAvPjwvZGl2PjxkaXYgY2xhc3M9J2NhcmQtZm9vdGVyJz48cCBjbGFzcz0ndGV4dC1jZW50ZXIgcC0wIG0tMCc+RWtuYXRoIFNoaW5kZTwvcD48cCBjbGFzcz0ndGV4dC1jZW50ZXIgcC0wIG0tMCc+SG9uJ2JsZSBEQ008L3A+PC9kaXY+PC9kaXY+PC9kaXY+PC90ZD48dGQ+PGRpdiBjbGFzcz0nJz48ZGl2IGNsYXNzPSdjYXJkIG0tMic+PGRpdiBjbGFzcz0nY2FyZC1ib2R5ICc+PGltZyBzcmM9J0ltYWdlcy9FbXBsb3llZS9IYXNhbiBNdXNocmlmLmpwZycgY2xhc3M9J2ltZy1mbHVpZCByb3VuZGVkLXRvcCB3LTEwMCcgYWx0PScnIC8+PC9kaXY+PGRpdiBjbGFzcz0nY2FyZC1mb290ZXInPjxwIGNsYXNzPSd0ZXh0LWNlbnRlciBwLTAgbS0wJz5IYXNhbiBNdXNocmlmPC9wPjxwIGNsYXNzPSd0ZXh0LWNlbnRlciBwLTAgbS0wJz5Ib24nYmxlIE1lZGljYWwgRWR1Y2F0aW9uIE1pbmlzdGVyPC9wPjwvZGl2PjwvZGl2PjwvZGl2PjwvdGQ+PHRkPjxkaXYgY2xhc3M9Jyc+PGRpdiBjbGFzcz0nY2FyZCBtLTUh9d3mZzWEozPksMvNiM4FQ7HeYKCFdG7nPjxpbWcgc3JjPSdJbWFnZXMvRW1wbG95ZWUvTUh9d3mZzWEozPksMvNiM4FQ7HeYKCFdG7Fzcz0naW1nLWZsdWlkIHJvdW5kZWQtdG9wIHctMTUh9d3mZzWEozPksMvNiM4FQ7HeYKCFdG7sYXNzPSdjYXJkLWZvb3Rlcic+PHAgY2xhc3M9J3RleHQtY2VudGVyIHAtMCBtLTUh9d3mZzWEozPksMvNiM4FQ7HeYKCFdG7wIGNsYXNzPSd0ZXh0LWNlbnRlciBwLTAgbS0wJz5TZWNyZXRhcnksIE1lZGljYWwgRWR1Y2F0aW9uIGFuZCBEcnVnczwvcD48L2Rpdj48L2Rpdj48L2Rpdj48L3RkPjwvdHI+PC90YWJsZTUh9d3mZzWEozPksMvNiM4FQ7HeYKCFdG7NYXJBJyBkaXJlY3Rpb249J3VwJyBsb29wPSd0cnVlJyBzY3JvbGxkZWxheT0nMzAwJyBoZWlnaHQ9JzE1MHB4JyBvbm1vdXNlb3Zlcj0ndGhpcy5zdG9wKCknIG9ubW91c2VvdXQ9J3RoaXMuc3RhcnQoKSc+PHVsIGNsYXNzPSdub3RpZnktbGlzdCc+PGxpIHN0eWxlPScgcGFkZGluZzogNXB4Oyc+IDxhIGNsYXNzPSduYXYtbGluayB0ZXh0LXNlY29uZGFyeSc+Tm8gUmVjZW50IEFjY291bmNlbWVudHM8L2E+PC9saTUh9d3mZzWEozPksMvNiM4FQ7HeYKCFdG71ATUh9d3mZzWEozPksMvNiM4FQ7HeYKCFdG7pb249J3VwJyBsb29wPSd0cnVlJyBzY3JvbGxkZWxheT0nMzAwJyBoZWlnaHQ9JzE1MHB4JyBvbm1vdXNlb3Zlcj0ndGhpcy5zdG9wKCknIG9ubW91c2VvdXQ9J3RoaXMuc3RhcnQoKSc+PHVsPjxsaSBzdHlsZT0nIHBhZGRpbmc6IDVweDsnPiA8YSBjbGFzcz0nbmF2LWxpbmsgdGV4dC1zZWNvbmRhcnknPk5vIFJlY2VudCBOb3RpZmljYXRpb25zPC9hPjwvbGk+PC91bD48L21hcnF1ZWU+ZAIHDxYCHwEF6QI8bWFycXVlZSBpZD0nTWFyRCcgZGlyZWN0aW9uPSd1cCcgbG9vcD0ndHJ1ZScgc2Nyb2xsZGVsYXk9JzMwMCcgaGVpZ2h0PScxNTUh9d3mZzWEozPksMvNiM4FQ7HeYKCFdG7vcCgpJyBvbm1vdXNlb3V0PSd0aGlzLnN0YXJ0KCknPjx1bCBjbGFzcz0nbm90aWZ5LWxpc3QnPjxsaSBzdHlsZT0nIHBhZGRpbmc6IDVweDsnPiA8YSBjbGFzcz0nbmF2LWxpbmsgdGV4dC1zZWNvbmRhcnknICB0YXJnZXQ9J19ibGFuaycgaHJlZj0nXEZpbGVzXERvd25sb2Fkc18zMDA3MjAyNV9PTUh9d3mZzWEozPksMvNiM4FQ7HeYKCFdG7xhdGVzdC5wZGYnPk9NU19SZXF1aXJlbWVudF9Eb3dubG9hZHNfbGF0ZXN0PC9hPjwvbGk+PC91bD48L21hcnF1ZWU+ZAIJDxYCHwEF9QE8bWFycXVlZSBpZD0nTWFySScgZGlyZWN0aW9uPSd1cCcgbG9vcD0ndHJ1ZScgc2Nyb2xsZGVsYXk9JzMwMCcgaGVpZ2h0PScxNTUh9d3mZzWEozPksMvNiM4FQ7HeYKCFdG7vcCgpJyBvbm1vdXNlb3V0PSd0aGlzLnN0YXJ0KCknPjx1bD48bGkgc3R5bGU9JyBwYWRkaW5nOiA1cHg7Jz4gPGEgY2xhc3M9J25hdi1saW5rIHRleHQtc2Vjb25kYXJ5JyA+Tm8gUmVjZW50IEluc3RydWN0aW9uczwvYT48L2xpPjwvdWw+PC9tYXJxdWVlPmQCBQ8PFgIeBFRleHQFPTgzLCBNaXR0YWwgQ2hhbWJlcnMgOHRoIEZsb29yLDIyOCBOYXJpbWFuIFBvaW50IE11bWJhaSA0MDAwMjFkZAIHDw8WAh8CBQwwMjItMjI4MjgyNjJkZAIJDw8WAh8CBQQyNDUyZGQCCw8PFgIfAgUHNTIzNzI2M2RkAg0PDxYCHwIFCzEyIE1heSAyMDI2ZGRkIR0KOG9J9fyS2pTnN5wrgxPlVbg=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResource.axd?d=zQoiTf-a8dSjZDmxKIl0UM41B5v0EM7-DrQgBMD5yZmynAAXItYgQNGgEx03DCllzJomGJ3lqzngFeeHhOyO7_qFb541&amp;t=638901734248157332" type="text/javascript"></script>
+
+
+<script src="ScriptResource.axd?d=dcyXkro2SUfLoz30Br0OnQ7iN6YpkJ1ZlF8Mw1boZzhd1YHZULCmctxGxmGhC2wYlo-aPZPVAjDTt30Ci4pH8i4I8m2y2MJTlXbUM6kJxqVRq-F7fDKkZfHzenwcj5Fb4LonNg2&amp;t=3a1336b1" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+try {
+    if (typeof(Sys) === 'undefined') {
+        console.warn('ASP.NET Ajax client-side framework failed to load. Continuing without it.');
+    }
+} catch (e) {
+    console.warn('Error checking ASP.NET Ajax framework:', e);
+}
+//]]>
+</script>
+
+<script src="ScriptResource.axd?d=344NtijGx3ULCxWBU7LtOhctu5nUXtBnECKTUcuauaxDHuK46R3P-UmCv0UbF9Ac4Y6gXhEGclAJ8BrA9zkAR7Fuk3lK4dMPwGXTqV_LdBAEKuGCusUrPA3C2n7vUCMfqfnHBA2&amp;t=3a1336b1" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="8D0E13E6" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm', ['tctl00$ContentPlaceHolder1$uppan',''], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 px-lg-4 bg-light py-2 d-none d-lg-block">
+            <div class="container">
+                <div class="row gx-0 align-items-center">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <img src="Images/webicon.png" alt="mcim" width="20" style="margin-right: 10px;" />
+                            <span class="top-brand">Ayurveda & Unani | mcimindia.co.in</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex justify-content-end">
+                            <div class="d-flex border-end border-secondary pe-3">
+                                <a class="btn p-0 text-secondary me-3" href="#">A+</a>
+                                <a class="btn p-0 text-secondary me-3" href="#">A-</a>
+                                <a href="/SiteMap" class="text-secondary nav-link"><small><i class="fa fa-sitemap" style="margin-right: 5px;"></i>Site-Map</small></a>
+                            </div>
+                            <div class="dropdown ms-3">
+                                <a href="#SkipMain" class="text-secondary nav-link"><small><i class="fa fa-arrow-down text-secondary me-2"></i>Skip to Main</small></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a href="./index.html" class="navbar-brand p-0">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div data-wow-delay="0.2s">
+                                        <img src="Images/mcim-logo.png" alt="Logo" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <h1 class=" mb-0 bran-name">M.C.I.M.</h1>
+                                </td>
+                            </tr>
+                        </table>
+                    </a>
+                    <button class="navbar-toggler border border-danger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-danger"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav mx-0 mx-lg-auto ">
+                            <a href="./index.html" class="nav-item nav-link text-black"><i class="fa fa-home"></i>Home</a>
+                            <a href="./404.html" class="nav-item nav-link text-black"><i class="fa fa-user-o"></i>About Us</a>
+                            <a href="./404.html" class="nav-item nav-link text-black"><i class="fa fa-stethoscope"></i>Doctor's Login</a>
+                            <a href="./404.html" class="nav-item nav-link text-black"><i class="fa fa-building-o"></i>College Login</a>
+                            <a href="./404.html" class="nav-item nav-link text-black"><i class="fa fa-sign-in"></i>New Login</a>
+                            <a href="./404.html" class="nav-item nav-link text-black"><i class="fa fa-phone"></i>Contact Us</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+
+
+        <!-- JavaScript Libraries -->
+        <script src="js/jquery-3.7.1.min.js"></script>
+  
+        <script src="js/bootstrap.bundle.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+
+        <script type="text/javascript">
+            this.history.forward(-1);
+
+            // With jQuery
+            $(document).on({
+                "contextmenu": function (e) {
+                    // Stop the context menu
+                    e.preventDefault();
+                },
+
+            });
+        </script>
+
+        <div>
+            
+    <link href="css/Home.css" rel="stylesheet" />
+    <style>
+        
+    </style>
+    <div id="ctl00_ContentPlaceHolder1_uppan">
+	
+
+            <div class="container-fluid bg-light p-2">
+                <div class="container">
+                    <div id="banner" class="banner">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                <div class="text-center mx-auto pb-0 wow fadeInUp" data-wow-delay="0.2s">
+                                    <img src="Images/mcim-logo.png" class="img-fluid img-logo" alt="logo" />
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-8  col-sm-8">
+                                <div class="row pb-3 bg-light">
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="text-center mx-auto pb-0 wow fadeInUp" data-wow-delay="0.2s">
+
+                                            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img src="Images/banner-marathi.png" class="d-block w-100" alt="..." />
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="Images/banner-english.png" class="d-block w-100" alt="..." />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                <div class="text-center mx-auto pb-0 wow fadeInUp" data-wow-delay="0.2s">
+                                    <img src="Images/MahaLogo.png" class="img-fluid img-logo" alt="logo" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--latest news-->
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 ">
+                            <div class=" pb-2 wow fadeInUp" data-wow-delay="0.6s">
+                                <table class="latest-news">
+                                    <tr>
+                                        <td class="latest-news-header">Latest Update
+                                        </td>
+                                        <td class="latest-news-body">
+                                            <marquee id="MarNews" direction="left" onmouseover='this.stop()' onmouseout='this.start()'>
+
+                                                <a href="#"><span class="dot"></span>०१/०१/२०१८ नंतर नोंदणीकृत वैद्यकीय व्यवसायीना सुचित करण्यात येते की आपण आपल्या नोंदणीचे नूतनीकरण आपल्या वैद्य दिनांकाच्या दोन महिन्यापूर्वी ऑनलाईन पद्धतीने करून द्यावे..</a>
+
+                                            </marquee>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="SkipMain"></div>
+            <div class="container-fluid bg-light pb-3 mb-0">
+                <div class="container pb-0">
+                    <div class="row g-5 ">
+                        <!--left-->
+                        <div class="col-xl-4 wow fadeInLeft " data-wow-delay="0.2s">
+                            <div class="about-item-content bg-white rounded p-3 h-100">
+                                <nav class="navbar-expand-lg navbar-light">
+                                    <div class="ayush-lokam">
+
+                                        <h5 class="text-success"><b>।। आयुषे सर्वलोकानाम् ।।</b></h5>
+                                        <img src="Images/ayu-krushi.png" alt="ayu" class="ayu-krushi" />
+
+                                    </div>
+
+                                    <div class="seprator "></div>
+                                    <!--apps type-->
+                                    <table style="width: 100%;">
+                                        <tr>
+                                            <td><a href="#" class="navbar-brand p-0 text-center  ">
+                                                <h5 class="text-success p-3 hide-big-screen">Online Applications Menu</h5>
+                                            </a></td>
+                                            <td style="width: 20px;">
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapseApps">
+                                                    <span class="fa fa-bars display-5"></span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div class="collapse navbar-collapse" id="navbarCollapseApps">
+                                        <div id="appsLink">
+                                            <div class="list-apps">
+                                                <div class="card border border-warning">
+                                                    <div class="card-body">
+                                                        <p class="text-center"><b>New Applications</b></p>
+                                                        <a href="./404.html" class="nav-item nav-link">Permanent Registration</a>
+                                                        <a href="./404.html" class="nav-item nav-link">Permanent Registration (OMS)</a>
+                                                        <a href="./404.html" class="nav-item nav-link">NOC for Provisional</a>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                                <div class="card border border-primary">
+                                                    <div class="card-body">
+                                                        <p class="text-center"><b>Registered Doctor's</b></p>
+                                                        <a href="./404.html" class="nav-item nav-link">Renewal / Restoration</a>
+                                                        <a href="./404.html" class="nav-item nav-link">Additional Qualification</a>
+                                                        <a href="./404.html" class="nav-item nav-link">Good Standing Certificate</a>
+                                                        <a href="./404.html" class="nav-item nav-link">Change of Address</a>
+                                                        <a href="./404.html" class="nav-item nav-link">Change Of Name</a>
+                                                        <a href="./404.html" class="nav-item nav-link">Cancellation of Registration (MH)</a>
+                                                        <a href="./404.html" class="nav-item nav-link">Cancellation of Registration (OMS)</a>
+                                                        <a href="./404.html" class="nav-item nav-link">No Pending Negligence Case Cert.</a>
+                                                        <p class="text-center"><b>Duplicate Certificate</b></p>
+                                                        <a href="./404.html" class="nav-item nav-link">Duplicate ID Card</a>
+                                                        <a href="./404.html" class="nav-item nav-link">Duplicate Registration</a>
+                                                        <a href="./404.html" class="nav-item nav-link">Duplicate Additional Qualification</a>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                            </div>
+                                            <!--updation-->
+
+                                            <div id="status" class="text-center mx-auto pb-0 wow fadeInUp" data-wow-delay="0.2s">
+                                                <div class="card border border-secondary ">
+                                                    <div class="card-body">
+                                                        <p><b>Check Application Status</b></p>
+
+                                                        <p><a href="./404.html" class="btn btn-outline-secondary w-100">Check Status</a></p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <div id="updation" class="text-center mx-auto pb-0 wow fadeInUp" data-wow-delay="0.2s">
+                                                <div class="card border border-secondary ">
+                                                    <div class="card-body">
+                                                        <p><b>Online Data Updating Program</b></p>
+                                                        <p>This facility for Registered Maharashtra Practitioner Under Karnataka University,Dharwad, Karnataka </p>
+                                                        <p><a href="./404.html" class="btn btn-outline-secondary w-100">Update Data</a></p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <!-receipt-->
+                                            <div id="PayReceipt" class="text-center mx-auto pb-0 wow fadeInUp" data-wow-delay="0.2s">
+                                                <div class="card border border-success   ">
+                                                    <div class="card-body">
+                                                        <p><b>Download Payment Receipt</b></p>
+                                                        <p>This option is allow to download payment receipt.</p>
+                                                        <p><a href="./404.html" target="_blank" class="btn btn-outline-success w-100">Download</a></p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <!--complaint-->
+                                            <div id="complaint" class="complaint text-center mx-auto pb-0 wow fadeInUp" data-wow-delay="0.2s">
+                                                <div class="card border border-danger text-center">
+                                                    <div class="card-body">
+                                                        <p><b>Complaint Against Doctor</b></p>
+                                                        <p>If you have any complaint against doctor under Ayurveda or Unani faculty, you can raise complaint here.</p>
+                                                        <p><a href="./404.html" class="btn btn-outline-danger w-100">Raise Complaint</a></p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </nav>
+                            </div>
+                        </div>
+                        <!--right-->
+                        <div class="col-xl-8 wow fadeInRight" data-wow-delay="0.2s">
+                            <div class="bg-white rounded p-3 h-100">
+                                <div class="row g-4 justify-content-center">
+
+                                    <!--logins-->
+                                    <div class="list-logins wow fadeInRight" data-wow-delay="0.4s">
+                                        <div class="">
+                                            <div class="log-tabs">
+                                                <a href="./404.html"><i class="fa fa-stethoscope"></i>Doctor's Login</a>
+                                            </div>
+                                            <div class="log-tabs">
+                                                <a href="./404.html"><i class="fa fa-building-o"></i>College<br />
+                                                    Login</a>
+                                            </div>
+                                            <div class="log-tabs">
+                                                <a href="./404.html"><i class="fa fa-sign-in"></i>New User
+                                                    <br />
+                                                    Login</a>
+                                            </div>
+                                            <div class="log-tabs sm-log-tabs">
+                                                <a href="./FindDoctor.html"><i class="fa fa-search"></i>Find Your Doctor</a>
+                                            </div>
+                                            <div class="log-tabs sm-log-tabs">
+                                                <a href="./404.html" target="_blank"><i class="fa fa-qrcode"></i>QR Code Scanner</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--team-->
+                                    <div class="container-fluid team py-0">
+                                        <div class="py-0">
+                                            <div class="row g-4">
+                                                <div class="mcim-team ">
+                                                    <div class="table-responsive">
+                                                        <div id="ctl00_ContentPlaceHolder1_divEmp" class="wow fadeInUp" data-wow-delay="0.4s"><table><tr><td><div class=''><div class='card m-2'><div class='card-body '><img src='Images/Employee/Devendra Fadnavis.jpg' class='img-fluid rounded-top w-100' alt='' /></div><div class='card-footer'><p class='text-center p-0 m-0'>Devendra Fadnavis</p><p class='text-center p-0 m-0'>Hon'ble Chief Minister</p></div></div></div></td><td><div class=''><div class='card m-2'><div class='card-body '><img src='Images/Employee/Sunetra Ajit Pawar.jpg' class='img-fluid rounded-top w-100' alt='' /></div><div class='card-footer'><p class='text-center p-0 m-0'>Sunetra Ajit Pawar</p><p class='text-center p-0 m-0'>Hon'ble DCM</p></div></div></div></td><td><div class=''><div class='card m-2'><div class='card-body '><img src='Images/Employee/Eknath Shinde.jpg' class='img-fluid rounded-top w-100' alt='' /></div><div class='card-footer'><p class='text-center p-0 m-0'>Eknath Shinde</p><p class='text-center p-0 m-0'>Hon'ble DCM</p></div></div></div></td><td><div class=''><div class='card m-2'><div class='card-body '><img src='Images/Employee/Hasan Mushrif.jpg' class='img-fluid rounded-top w-100' alt='' /></div><div class='card-footer'><p class='text-center p-0 m-0'>Hasan Mushrif</p><p class='text-center p-0 m-0'>Hon'ble Medical Education Minister</p></div></div></div></td><td><div class=''><div class='card m-2'><div class='card-body '><img src='Images/Employee/Mr. Dheeraj Kumar.jpg' class='img-fluid rounded-top w-100' alt='' /></div><div class='card-footer'><p class='text-center p-0 m-0'>Mr. Dheeraj Kumar</p><p class='text-center p-0 m-0'>Secretary, Medical Education and Drugs</p></div></div></div></td></tr></table></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <!--notice-->
+                                    <div id="notice0503" class="wow fadeInUp" data-wow-delay="0.2s">
+                                        <div class="card border border-danger p-3">
+                                            <img src="PDF/Notice05032026.jpg" alt="renewal" class="w-100" />
+                                        </div>
+                                    </div>
+                                    <!--renewal-->
+                                    <div id="notice" class="wow fadeInUp" data-wow-delay="0.2s">
+                                        <div class="card border border-danger p-3">
+                                            <img src="PDF/MCIM_Renewal_Notice_04122023.jpg" alt="renewal" class="w-100" />
+                                        </div>
+                                    </div>
+                                    <!--ayuneeti
+                                    <div id="ayuneeti" class="text-center mx-auto pb-0 wow fadeInUp" data-wow-delay="0.2s">
+                                        <div class="card border border-info text-center">
+                                            <div class="card-body">
+                                                <p><b>New Policy for CME/CPD's</b></p>
+                                                <div class="row">
+                                                    In accordance with the new guidelines, all RMPs are required to earn CME points
+                                                        for the renewal of their medical licenses. They can conveniently earn these points
+                                                        by logging into the MCIM-affiliated online CME platform
+                                                </div>
+                                                <div class="row  p-3 display-6">
+                                                    <a target="_blank" href="https://ayuneeti.com/">www.ayuneeti.com</a>
+                                                </div>
+                                                <div class="row">
+                                                    <a target="_blank" class="text-secondary p-1" href="PDF/Gazette.pdf">The Gazette of India</a>
+                                                </div>
+                                                <div class="row">
+                                                    <a target="_blank" class="text-secondary p-1" href="PDF/CPD Credit Points Policy by MCIM.pdf">Guidelines for RMP's</a>
+                                                </div>
+                                                <div class="row p-1">
+                                                    <marquee direction="left" onmouseover="this.stop();" onmouseout="this.start();"><span style="color:Red; font-size:14px;">* सर्व नोंदणीकृत वैद्यकीय व्यावसायिकांना सूचित करण्यात येत आहे की महाराष्ट्र कौन्सिल ऑफ इंडियन मेडिसिन मुंबई द्वारे ऑनलाइन CME संदर्भात कुठलेही शुल्क निश्चित करण्यात आलेले नाही.</span></marquee>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>-->
+
+                                    <div id="removedList" class="text-center mx-auto pb-0 wow fadeInUp" data-wow-delay="0.2s">
+                                        <div class="card border border-danger text-center">
+                                            <div class="card-body">
+                                                <p><a target="_blank" href="/PDF/List22082025.pdf" style="color: #ff0000; font-size: 16px; text-decoration:none;">Important Notice for Registered practitioners Regarding Renewal Registration list<br /> (Reg.no  1 to 93027 still 2024).</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--election-->
+                                    <div id="election" class="text-center mx-auto pb-0 wow fadeInUp" data-wow-delay="0.2s">
+                                        <div class="card border border-warning text-center">
+                                            <div class="card-body">
+                                                <p><b>एम.सी.आय.एम. निवडणूक-२०२२ : जाहीर सूचना</b></p>
+                                                <p><a target="_blank" href="/PDF/MCIM ELECTION 2022-PROVISIONAL VOTER LIST- 090522.pdf" class="nav-link">(अ) नोंदणीकृत वैद्यकीय व्यवसायी, (ब) प्राचार्य आणि (क) अध्यापक यांची तात्पुरती मतदार यादी</a></p>
+                                                <p><b>व</b></p>
+                                                <p><a target="_blank" href="/PDF/MCIM ELECTION LIST 12052022.pdf" class="nav-link">भाग-२ आणि भाग-३ मधील नोंदणीकृत वैद्यकीय व्यवसायींची तात्पुरती मतदार यादी</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--notifications-->
+            <div class="container-fluid service py-4 pb-5">
+                <div class="container pb-3">
+                    <div class="row pb-3 notity">
+                        <div class="col-lg-3 col-md-3 pb-2">
+                            <div class="wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="card text-center">
+                                    <div class="card-header bg-success text-white">
+                                        <i class="fa fa-bell"></i>Announcements
+                                    </div>
+                                    <div class="card-body  border border-success">
+                                        <div id="ctl00_ContentPlaceHolder1_divAnncouncement"><marquee id='MarA' direction='up' loop='true' scrolldelay='300' height='150px' onmouseover='this.stop()' onmouseout='this.start()'><ul class='notify-list'><li style=' padding: 5px;'> <a class='nav-link text-secondary'>No Recent Accouncements</a></li></ul></marquee></div>
+                                        <div>
+                                            <a href="/Archives?viewType=Announcements" class="nav-link pull-right"><small>More <i class="fa fa-angle-right"></i></small></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 pb-2">
+                            <div class="wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="card text-center">
+                                    <div class="card-header bg-success text-white">
+                                        <i class="fa fa-bell-o"></i>Notifications
+                                    </div>
+                                    <div class="card-body border border-success">
+                                        <div id="ctl00_ContentPlaceHolder1_divNotification"><marquee id='MarN' direction='up' loop='true' scrolldelay='300' height='150px' onmouseover='this.stop()' onmouseout='this.start()'><ul><li style=' padding: 5px;'> <a class='nav-link text-secondary'>No Recent Notifications</a></li></ul></marquee></div>
+                                        <div>
+                                            <a href="/Archives?viewType=Notifications" class="nav-link pull-right"><small>More <i class="fa fa-angle-right"></i></small></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 pb-2">
+                            <div class="wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="card text-center">
+                                    <div class="card-header bg-success text-white">
+                                        <i class="fa fa-download"></i>Downlaods
+                                    </div>
+                                    <div class="card-body border border-success">
+                                        <div id="ctl00_ContentPlaceHolder1_divDownload"><marquee id='MarD' direction='up' loop='true' scrolldelay='300' height='150px' onmouseover='this.stop()' onmouseout='this.start()'><ul class='notify-list'><li style=' padding: 5px;'> <a class='nav-link text-secondary'  target='_blank' href='/Files/Downloads_30072025_OMS_Requirement_Downloads_latest.pdf'>OMS_Requirement_Downloads_latest</a></li></ul></marquee></div>
+                                        <div>
+                                            <a href="/Archives?viewType=Downloads" class="nav-link pull-right"><small>More <i class="fa fa-angle-right"></i></small></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 pb-2">
+                            <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                <div class="card text-center">
+                                    <div class="card-header bg-success text-white">
+                                        <i class="fa fa-info-circle"></i>Instructions
+                                    </div>
+                                    <div class="card-body border border-success">
+                                        <div id="ctl00_ContentPlaceHolder1_divInstruction"><marquee id='MarI' direction='up' loop='true' scrolldelay='300' height='150px' onmouseover='this.stop()' onmouseout='this.start()'><ul><li style=' padding: 5px;'> <a class='nav-link text-secondary' >No Recent Instructions</a></li></ul></marquee></div>
+                                        <div>
+                                            <a href="/Archives?viewType=Instructions" class="nav-link pull-right"><small>More <i class="fa fa-angle-right"></i></small></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-3 notity">
+                    </div>
+                </div>
+            </div>
+
+        
+</div>
+
+        </div>
+        <!--footer-->
+        <div class="container-fluid  bg-light text-secondary py-0 wow fadeIn footer my-footer" data-wow-delay="0.2s">
+
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 mb-3 footer-item" id="ContactUs">
+                        <h4 class="text-black"><i class="fa fa-map-marker text-black me-2"></i>Contact</h4>
+                        <div class="seprator"></div>
+                        <p>
+                            <span id="ctl00_lblAddrss" class="text-black">83, Mittal Chambers 8th Floor,228 Nariman Point Mumbai 400021</span>
+                        </p>
+                        <p>
+                            <i class="fa fa-phone text-black me-2"></i>
+                            <span id="ctl00_lblTelephone" class="text-black">022-22828262</span>
+                        </p>
+                        <a href="./404.html" class="nav-link text-black"><small>More <i class="fa fa-angle-right"></i></small></a>
+                    </div>
+                    <div class="col-lg-4 col-md-4  mb-3 footer-item">
+                        <h4 class="text-black"><i class="fa fa-link text-black me-2"></i>Quick Links</h4>
+                        <div class="seprator"></div>
+                        <ul class="footer-links">
+                            <li><a href="./index.html" class="nav-link text-black"><i class="fa fa-angle-right me-2"></i>Home</a></li>
+                            <li><a href="./404.html" class="nav-link text-black"><i class="fa fa-angle-right me-2"></i>Important Links</a></li>
+                            <li><a href="./404.html" class="nav-link text-black"><i class="fa fa-angle-right me-2"></i>Disclaimer</a></li>
+                            <li><a href="./404.html" class="nav-link text-black"><i class="fa fa-angle-right me-2"></i>Terms & Conditions</a></li>
+                            <li><a href="./404.html" class="nav-link text-black"><i class="fa fa-angle-right me-2"></i>Acts & Rules</a></li>
+                            <li><a href="./404.html" class="nav-link text-black"><i class="fa fa-angle-right me-2"></i>RTI</a></li>
+                            <li><a href="./404.html" class="nav-link text-black"><i class="fa fa-angle-right me-2"></i>Site Map</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-4  mb-3 footer-item">
+                        <h4 class="text-black"><i class="fa fa-cog fa-spin text-black me-2"></i>Updates</h4>
+                        <div class="seprator"></div>
+                        <div class="footer-item">
+                            <p class="p-0 m-0  text-black">
+                                <i class="fa fa-arrow-right me-2"></i>Today's Visits :
+                                <span id="ctl00_lblDailyVisit" class="text-black">2452</span>
+                            </p>
+                            <p class="p-0 m-0  text-black">
+                                <i class="fa fa-arrow-right me-2"></i>Total Visits :
+                                <span id="ctl00_lblTotalVisit" class="text-black">5237263</span>
+                            </p>
+                            <p class="p-0 m-0 text-black">
+                                <i class="fa fa-calendar me-2"></i>Last Updated On :
+                                <span id="ctl00_lblLastUpdateDt" class="text-black">12 May 2026</span>
+                            </p>
+                            <a href="./404.html" class="nav-link text-black"><i class="fa fa-lock me-2"></i>Admin Login</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="seprator"></div>
+                    <p class="p-0 m-0" style="font-size: 14px;">Copyright © mcimindia.co.in | Designed By : Integrated Business Solution, Mumbai </p>
+                </div>
+            </div>
+        </div>
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-secondary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+    </form>
+</body>
+</html>```

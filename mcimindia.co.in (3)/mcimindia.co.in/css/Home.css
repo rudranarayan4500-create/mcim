@@ -1,0 +1,295 @@
+.banner {
+}
+
+.box-shoadow {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.img-logo {
+  width: 100%;
+}
+
+/*news*/
+.latest-news {
+  border: 1px solid #e85122;
+  /*box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);*/
+  background-color: #fff;
+  min-width: 100% !important;
+}
+
+.latest-news-header {
+  width: 160px;
+  font-size: 14px;
+  font-weight: normal;
+  background-color: #e85122;
+  text-align: center;
+  color: #fff;
+}
+
+.latest-news-body a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+.dot {
+  background-color: #d11130;
+  border-radius: 50%;
+  margin-right: 4px;
+  margin-left: 10px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+}
+
+.new-head {
+  background-color: #e85122;
+  color: #fff;
+  padding: 3px;
+  width: 120px;
+}
+/*apps*/
+.ayush-lokam {
+  text-align: center;
+}
+
+.ayu-krushi {
+  width: 250px;
+  margin-bottom: 10px;
+  /*box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;*/
+}
+
+.list-apps {
+  width: 100%;
+}
+
+.list-apps a {
+  border: 0px solid #dcd7d7;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #198759;
+  color: #fff;
+}
+
+.list-apps a:hover {
+  background-color: #074129;
+  color: #fff !important;
+}
+
+/*mcim team*/
+.mcim-team::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.mcim-team .card {
+  width: 140px;
+}
+
+.mcim-team table {
+  float: none;
+  margin: auto;
+}
+
+.mcim-team .card-body {
+  padding: 0;
+  height: 150px;
+}
+
+.mcim-team .card-body img {
+  height: 150px;
+}
+
+.notify-list li a {
+  font-size: 14px;
+}
+
+.mcim-team .card-footer {
+  font-size: 12px;
+  min-height: 60px;
+  padding: 1px;
+}
+
+/*notification*/
+.notity i {
+  margin-right: 10px;
+}
+
+/*fieldset*/
+.fieldset {
+  border: 1px solid #0f4f96;
+  padding: 0 10px 10px 10px;
+  border-radius: 5px;
+  margin: 10px 0 10px 0;
+}
+
+.fieldset legend {
+  width: auto;
+  text-transform: none;
+  padding: 0px;
+  border: 0;
+  color: #003d52;
+  font-size: 16px;
+}
+
+.fieldset .row {
+  margin-bottom: 10px;
+}
+
+.new-card {
+  border: 1px solid #003d52;
+}
+
+.new-card .card-header {
+  text-align: center;
+  color: #fff;
+  background-color: #003d52;
+}
+
+.rmp-card {
+  border: 1px solid #003d52;
+  margin-top: 10px;
+}
+
+.rmp-card .card-header {
+  text-align: center;
+  color: #fff;
+  background-color: #003d52;
+}
+/*Progress bar*/
+.pro-modal {
+  position: fixed;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: Black;
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+  -moz-opacity: 0.8;
+}
+
+.pro-center {
+  z-index: 1000;
+  margin: 250px auto;
+  width: 130px;
+  border-radius: 10px;
+  filter: alpha(opacity=100);
+  opacity: 1;
+  -moz-opacity: 1;
+}
+
+.pro-center img {
+  height: 128px;
+  width: 128px;
+  background-color: Black;
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+  -moz-opacity: 0.8;
+}
+
+.stopspam {
+  font-size: 20px;
+  width: 60px;
+  color: #f30f0f;
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia,
+    serif;
+}
+
+.hide-big-screen {
+  display: none;
+}
+/*right login tabls*/
+.list-logins {
+  margin-bottom: 20px;
+}
+
+.list-logins .log-tabs {
+  width: 20%;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.list-logins a {
+  width: 95%;
+  background-color: #fff;
+  color: #003d52;
+  font-weight: bold;
+  min-height: 120px;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  /*border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;*/
+  border: 1px solid #198759;
+  display: inline-block;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.list-logins a:hover {
+  background-color: rgba(149, 157, 165, 0.2);
+}
+
+.list-logins a i {
+  font-size: 32px;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/*complaint*/
+.complaint .card-body ul {
+  list-style: none;
+}
+
+.complaint .card-body ul li {
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.img-complaint {
+  width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+  .img-logo {
+    display: none;
+  }
+
+  .hide-big-screen {
+    display: inline-block;
+  }
+
+  .list-logins .log-tabs {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .img-logo {
+    display: none;
+  }
+
+  .hide-big-screen {
+    display: inline-block;
+  }
+
+  .list-logins .log-tabs {
+    width: 33%;
+  }
+
+  .list-logins .sm-log-tabs {
+    width: 50% !important;
+  }
+
+  .img-complaint {
+    display: none;
+  }
+}
